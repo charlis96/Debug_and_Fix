@@ -21,11 +21,11 @@ namespace WordsPhrases
             const string text2 = " text2 ";
             const string expected = "text1 text2";
             Phrase phrase = new Phrase();
-            Word word1 = new Word(text1);
-            Word word2 = new Word(text2);
+            Word word1 = new Word(text1.Trim());
+            Word word2 = new Word(text2.Trim());
             phrase.AddWord(word1);
             phrase.AddWord(word2);
-            string actual = phrase.GetPhrase();
+            string actual = phrase.GetPhrase().Trim();
             //Assert.AreEqual(expected, actual);
 
             if (actual == expected)
